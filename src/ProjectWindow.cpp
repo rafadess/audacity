@@ -661,6 +661,11 @@ ProjectWindow::ProjectWindow(wxWindow * parent, wxWindowID id,
    project.Bind( EVT_UNDO_RESET, &ProjectWindow::OnUndoReset, this );
 
    wxTheApp->Bind(EVT_THEME_CHANGE, &ProjectWindow::OnThemeChange, this);
+   
+   
+   /*----------Rafadess----------*/
+   mVideoViewer = safenew VideoViewer(project);
+   mVideoViewer->Show();
 }
 
 ProjectWindow::~ProjectWindow()

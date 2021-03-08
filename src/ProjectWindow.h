@@ -15,6 +15,7 @@ Paul Licameli split from AudacityProject.h
 #include "ProjectWindowBase.h" // to inherit
 #include "TrackPanelListener.h" // to inherit
 #include "Prefs.h"
+#include <VideoViewer.h>
 
 class Track;
 
@@ -170,6 +171,10 @@ public:
    bool mbInitializingScrollbar{ false };
 
 private:
+   /*------------Rafadess--------------*/
+   VideoViewer* mVideoViewer;
+   
+   
    wxRect mNormalizedWindowState;
 
    wxPanel *mTopPanel{};
